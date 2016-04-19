@@ -1,0 +1,21 @@
+For this analysis, the following filters were applied:
+
+Bus Lines: M15, M10 <br>
+Inferred Phase: IN_PROGRESS
+
+Also, the vehicle with highest frequency of rides on that particular day for M15 and M10 were considered for studying the inconsistencies present in the IN_PROGRESS mode. 
+
+Below are the ouptuts of the plots obtained for bus numbers 5624 and 6705 across M15 and M10 buslines respectively. These plots are based on the average of total distance traveled from starting point with respect to time. Under this scenario, typically cyclic variations along with time should be observed as bus makes multiple rides along a given bus line to and fro on any given day. The day analysed for this plot is 1 Aug 2014 and data is taken from historical bus mta site. The x-axis of the plots is based on hour, minute and inferred direction id which is an indicator whether the bus is making a to journey or opposite journey. Ideally consistent cycles of to and opposite rides should be noticed on the plot.
+
+From the plots, it can be inferred that on an average Bus 6705 shows a consistent trend across the day with very minute variations whereas Bus 5624 shows more variations in terms of cycle width especially in the evening peak periods.
+
+
+### Plot output of Bus 5624 in M15 Busline
+<p align="center">
+  <img src="bus5624_inprogress.png">
+</p>
+
+### Plot output of Bus 6705 in M10 Busline
+<p align="center">
+  <img src="bus6705_inprogress.png">
+</p>
