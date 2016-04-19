@@ -10,7 +10,7 @@ One of the reasons to launch the Bus Time service was a committment from NYC MTA
 ### Data Sources
 The data taken for the exploratory data analysis is historical data dump available on the MTA web site. Respective link for this is provided below and this data contains archived MTA Bus Time Data from August 1, 2014 through October 31, 2014. Each record in this data set contains, for a single bus, the time of observation, bus location, bus route, next stop, distance from that stop, and other variables described below.
 
-MTA Historical Data Source: http://web.mta.info/developers/MTA-Bus-Time-historical-data.html
+MTA Historical Data Source: http://web.mta.info/developers/MTA-Bus-Time-historical-data.html<br>
 MTA Historical Data Field Definitions: http://web.mta.info/developers/resources/nyct/MTA-Bus-Time-fields.htm
 
 However, for the recent years data, MTA has a well-documented API that allows a user to obtain information on any bus line in real time. The positions of all the buses are updated every 30 seconds, and each bus has detailed information on its route, the distance remaining to each stop, and the predicted arrival time at each future station at that point in time.
@@ -19,6 +19,7 @@ MTA Bus Time API: http://bustime.mta.info/wiki/Developers/Index
 
 ### Exploratory Data Analysis
 For initial level analysis more as an effort to understand the fields and their interactions, data for 01 Aug 2014 has been downloaded from the Historical MTA data link. This data itself was in the size of ~800 MB containing location level information for about 300 buses operational on that partiuclar day. In this analysis, majorly incosistencies were looked at, if any by selecting few buslines and high frequent vehicles amongst them. The output plots are shared in separate folders i.e. INPROGRESS_Analysis and LAYOVER_Analysis etc. Below hypotheses were looked into under the performed analysis:
+
 <br>
 1. Would bus vehicles show inconsistencies in schedule during en-route (i.e. ride IN_PROGRESS) more due to external factors like traffic congestion, high dwelling time during a stop etc?<br>
 2. Would bus vehicle show inconsistencies in schedule during rest period (i.e. ride LAYOVER) more due to factors like driver, bus conditions etc?
