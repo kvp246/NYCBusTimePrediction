@@ -5,21 +5,25 @@ NYC MTA Bus agency boasts of largest network of public buses than any other publ
   <img src="buscustomercomplaint.jpeg">
 </p>
 
-One of the reasons to launch the Bus Time service was a committment from NYC MTA Bus agency to address the delayness problem that is existing in current services and also with the hope to improve their operational efficiencies. Currently, Bus Time service offers information about time estimates of a bus's arrival at a queried stop. These time-based estimates take into consideration multiple factors that can affect the arrival time of a bus, such as its schedule, historical travel times, and current traffic conditions. Additionally there are other factors including cyclic variations like time of the day and day of the week, bus dwell time at any given stop and changing weather conditions. In this project, a new framework will be explored to predict the bus arrival times using the earlier discussed factors and then compared with estimates currently predicted by the Bus Time service used by NYC MTA agency. Specifically, the following questions will be addressed: 
-
-__1.__ How accurate are the estimates?
-__2.__ 
-
-Thankfully, the MTA has an app called the MTA Bus Time App that does a great job providing time estimates for all routes. But how accurate are these estimates? Is there a systematic error to these predictions (i.e. the times are consistently overestimated)? How certain can we be on these predictions (i.e. can we quantify the distribution of bus time arrivals)? These are questions that I seek to answer in this project.
+One of the reasons to launch the Bus Time service was a committment from NYC MTA Bus agency to address the delayness problem that is existing in current services and also with the hope to improve their operational efficiencies. Currently, Bus Time service offers information about time estimates of a bus's arrival at a queried stop. These time-based estimates take into consideration multiple factors that can affect the arrival time of a bus, such as its schedule, historical travel times, and current traffic conditions. Additionally there are other factors including cyclic variations like time of the day and day of the week, bus dwell time at any given stop and changing weather conditions. In this project, a new framework will be explored to predict the bus arrival times using the earlier discussed factors and then compared with estimates currently predicted by the Bus Time service used by NYC MTA agency. Specific efforts will be made to understand the differences that exist between the results of the Bus Time service and the newly built model.  
 
 ### Data Sources
+The data taken for the exploratory data analysis is historical data dump available on the MTA web site. Respective link for this is provided below and this data contains archived MTA Bus Time Data from August 1, 2014 through October 31, 2014. Each record in this data set contains, for a single bus, the time of observation, bus location, bus route, next stop, distance from that stop, and other variables described below.
 
-### Methodology
+MTA Historical Data Source: http://web.mta.info/developers/MTA-Bus-Time-historical-data.html
+MTA Historical Data Field Definitions: http://web.mta.info/developers/resources/nyct/MTA-Bus-Time-fields.htm
 
-### Final Deliverables
+However, for the recent years data, MTA has a well-documented API that allows a user to obtain information on any bus line in real time. The positions of all the buses are updated every 30 seconds, and each bus has detailed information on its route, the distance remaining to each stop, and the predicted arrival time at each future station at that point in time.
+
+MTA Bus Time API: http://bustime.mta.info/wiki/Developers/Index
+
+### Exploratory Data Analysis
+For initial level analysis more as an effort to understand the fields and their interactions, data for 01 Aug 2014 has been downloaded from the Historical MTA data link. This data itself was in the size of ~800 MB containing location level information for about 300 buses operational on that partiuclar day. In this analysis, majorly incosistencies were looked at, if any by selecting few buslines and high frequent vehicles amongst them. The output plots are shared in separate folders i.e. INPROGRESS_Analysis and LAYOVER_Analysis etc. Below hypotheses were looked into under the performed analysis:
+<br>
+1. Would bus vehicles show inconsistencies in schedule during en-route (i.e. ride IN_PROGRESS) more due to external factors like traffic congestion, high dwelling time during a stop etc?<br>
+2. Would bus vehicle show inconsistencies in schedule during rest period (i.e. ride LAYOVER) more due to factors like driver, bus conditions etc?
 
 ### References
 1. http://web.mta.info/nyct/facts/ffintro.htm
 2. http://www.mta.info/press-release/nyc-transit/time-based-arrival-estimates-launch-citywide-mta-bus-time%E2%84%A2
 3. http://gothamist.com/2015/04/23/stats_prove_that_select_bus_service.php
-4. 
